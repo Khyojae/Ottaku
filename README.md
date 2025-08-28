@@ -95,3 +95,11 @@
 
 ### 패션 데이터 분석
 <img width="426" height="567" alt="패션 데이터 분석" src="https://github.com/user-attachments/assets/7a28d272-01d8-474b-ad02-020abdaf6471" />  
+
+---
+
+### 시연 gif
+![Ottaku](https://github.com/user-attachments/assets/decb936e-f2b8-4de1-b60d-ec745c1d5242)
+
+유튜브 링크 : https://youtu.be/jqHrp3Tf1PM
+
