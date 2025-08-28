@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79e6670c-43ca-4fcc-b5d4-e6fe56944716" name="Changes" comment="0826">
+    <list default="true" id="79e6670c-43ca-4fcc-b5d4-e6fe56944716" name="Changes" comment="0828">
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLLM.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/P3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dw.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/first.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/p1.py" beforeDir="false" afterPath="$PROJECT_DIR$/p1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/p4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_input.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,12 +149,21 @@
       <option name="project" value="LOCAL" />
       <updated>1756196048067</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="0828">
+      <option name="closed" value="true" />
+      <created>1756345559060</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756345559060</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="0825" />
     <MESSAGE value="0826" />
-    <option name="LAST_COMMIT_MESSAGE" value="0826" />
+    <MESSAGE value="0828" />
+    <option name="LAST_COMMIT_MESSAGE" value="0828" />
   </component>
 </project>
