@@ -146,10 +146,5 @@
 | **📉 산업 기여** | 온라인 쇼핑몰 **반품률 감소** | 개인화 추천으로 구매 만족도를 높여 물류 및 운영 비용 절감 |
 
 
-### 시연 gif
-![Ottaku](https://github.com/user-attachments/assets/decb936e-f2b8-4de1-b60d-ec745c1d5242)
 
-웹사이트 : https://ottaku-sporf6mdmg8tszefzzdfgn.streamlit.app/
-
-유튜브 링크 : https://youtu.be/jqHrp3Tf1PM
 
