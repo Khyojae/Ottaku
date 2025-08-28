@@ -16,6 +16,8 @@ Ottaku는 옷을 좋아하지만 선택 과정에서 어려움을 겪는 소비�
 
 이 과정에서 많은 시간과 에너지를 쓰거나, 충동구매로 인해 옷을 제대로 활용하지 못하는 문제가 발생합니다.
 
+
+
 Ottaku는 이러한 문제를 해결하기 위해:
 
 사용자 맞춤형 코디 추천 (LLM 기반)
@@ -27,6 +29,7 @@ Ottaku는 이러한 문제를 해결하기 위해:
 을 통해, 단순한 쇼핑을 넘어 스마트한 패션 경험을 제공합니다.
 
 🎯 목표: 소비자의 든든한 패션 파트너
+
 
 👥 팀 구성
 이름	역할
@@ -89,7 +92,10 @@ AI 기반 코디 추천
 
 나의 옷장
 <img width="872" height="689" alt="나의 옷장" src="https://github.com/user-attachments/assets/51682286-310e-4301-959e-abf68e3bdb53" />
+
 퍼스널 컬러 분석
 <img width="460" height="490" alt="퍼스널 컬러 분석" src="https://github.com/user-attachments/assets/05a3e9fe-ce64-41ad-9fe0-a63f3369e4bd" />
+
 패션 데이터 분석
 <img width="426" height="567" alt="패션 데이터 분석" src="https://github.com/user-attachments/assets/7a28d272-01d8-474b-ad02-020abdaf6471" />
+
