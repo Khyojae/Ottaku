@@ -101,5 +101,10 @@
 ### 시연 gif
 ![Ottaku](https://github.com/user-attachments/assets/decb936e-f2b8-4de1-b60d-ec745c1d5242)
 
+웹사이트 : https://ottaku-sporf6mdmg8tszefzzdfgn.streamlit.app/
+
 유튜브 링크 : https://youtu.be/jqHrp3Tf1PM
+
+
+
 
