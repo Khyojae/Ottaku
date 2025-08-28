@@ -12,6 +12,7 @@ from pytrends.request import TrendReq
 from urllib.parse import quote
 import requests
 from datetime import datetime, timedelta
+import pytz # 시간대 변환을 위한 라이브러리
 
 # --- 페이지 기본 설정 ---
 st.set_page_config(
@@ -88,19 +89,22 @@ def process_weather_data(data):
     return df_pivot
 
 
-def get_base_time_for_date(target_date):
-    """선택된 날짜에 맞는 base_time을 계산하는 함수"""
-    now = datetime.now()
-    if target_date == now.date():
-        if now.hour < 2 or (now.hour == 2 and now.minute <= 10):
-            return (now - timedelta(days=1)).strftime('%Y%m%d'), "2300"
-        else:
-            available_times = [2, 5, 8, 11, 14, 17, 20, 23]
-            base_hour = max(t for t in available_times if t <= now.hour)
-            return now.strftime('%Y%m%d'), f"{base_hour:02d}00"
-    else:  # 과거 또는 미래 날짜 조회 시, 해당 날짜의 가장 마지막 예보 기준 시간을 사용
-        return target_date.strftime('%Y%m%d'), "2300"
+def get_base_datetime():
+    """API 요청에 필요한 base_date와 base_time을 한국 시간 기준으로 계산하는 함수"""
+    kst = pytz.timezone('Asia/Seoul')
+    now = datetime.now(kst)
 
+    if now.hour < 2 or (now.hour == 2 and now.minute <= 10):
+        base_dt = now - timedelta(days=1)
+        base_hour = 23
+    else:
+        base_dt = now
+        available_times = [2, 5, 8, 11, 14, 17, 20, 23]
+        base_hour = max(t for t in available_times if t <= now.hour)
+
+    base_date = base_dt.strftime('%Y%m%d')
+    base_time = f"{base_hour:02d}00"
+    return base_date, base_time
 
 # --- 1.2. 패션 추천 관련 함수 ---
 
@@ -270,7 +274,8 @@ def make_audio(text_to_speak, filename):
 
 
 # --- 2. 사이드바 및 페이지 상태 관리 ---
-st.sidebar.title("나만의 맞춤 패션 추천")
+st.sidebar.title("옷타쿠")
+st.sidebar.text("'옷타쿠'는 '옷'과 '오타쿠'의 합성어로, 옷을 진심으로 사랑하는 사람들을 위한 AI 기반 퍼스널 스타일리스트입니다.")
 if st.sidebar.button("🏠 나의 맞춤 패션 추천", use_container_width=True): st.session_state.page = "main"
 if st.sidebar.button("👚 나의 옷장", use_container_width=True): st.session_state.page = "closet"
 if st.sidebar.button("🎨 퍼스널 컬러 분석", use_container_width=True): st.session_state.page = "personal_color"
@@ -321,14 +326,11 @@ selected_location = st.sidebar.selectbox("조회할 지역을 선택하세요", 
 if st.sidebar.button("날씨 조회하기 🚀", use_container_width=True):
     with st.spinner('날씨 데이터를 가져오는 중입니다...'):
         nx, ny = locations[selected_location]
-        base_date, base_time = get_base_time_for_date(st.session_state.selected_date)
+        base_date, base_time = get_base_datetime() # ✨ (수정) 항상 현재 시간 기준으로 요청
         weather_json = get_weather_data(kma_api_key, base_date, base_time, nx, ny)
         if weather_json:
             df = process_weather_data(weather_json)
-            if not df.empty:
-                st.session_state.weather_data = {"location": selected_location, "df": df}
-            else:
-                st.session_state.weather_data = None
+            st.session_state.weather_data = {"location": selected_location, "df": df} if not df.empty else None
         else:
             st.session_state.weather_data = None
 
