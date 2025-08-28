@@ -1,7 +1,5 @@
 # 👕 옷타쿠 (Ottaku) - AI Personal Stylist
 
-![Ottaku Banner](https://placehold.co/1200x300/E0F7FA/006064?text=%EC%98%B7%ED%83%80%EC%BF%A0%20(Ottaku)&font=sans)
-
 **"옷을 사랑하는 당신을 위한 AI 기반 퍼스널 스타일리스트"**
 
 '옷타쿠'는 '옷'과 '오타쿠'의 합성어로, 옷을 진심으로 사랑하지만 매일 아침 "뭐 입지?"를 고민하는 사람들을 위해 탄생했습니다. Gemini와 OpenAI의 강력한 AI 모델을 활용하여, 사용자의 개인화된 정보와 옷장 속 아이템을 기반으로 최적의 코디를 추천하고 시각화해주는 올인원 패션 솔루션입니다.
@@ -154,3 +152,4 @@
 웹사이트 : https://ottaku-sporf6mdmg8tszefzzdfgn.streamlit.app/
 
 유튜브 링크 : https://youtu.be/jqHrp3Tf1PM
+
